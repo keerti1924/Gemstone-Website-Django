@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<!-- profile-page  -->
+
+<section class="py-4" style="margin-top: 100px;">
+    <div class="profile-page">
+
+        <div class="container profile-content p-5">
+
+            <div class="row profile-update">
+                <div class="col-md-12">
+                    <div class="header text-center pb-2 mt-4">
+                        <h1>Edit Profile</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row profile-main" >
+
+                <div class="col-md-12 col-lg-6">
+
+                    {% include 'components/message.html' %}
+
+                    <form method="POST" action="{% url 'profile_update' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row text-center">
+                            <div class="col-12">
+                                <img src="{{ user.profile.profile_image.url }}" alt="" name="image"
+                                    class="rounded-circle mb-5 p-1" height="150px" width="150px"
+                                    style="border: 5px solid rgb(32, 79, 209);">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="profile-input-field">
+                                    <label for="Profile Image" class="mb-2">Profile Image</label>
+                                    {{form.profile_image}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="profile-input-field">
+                                    <label for="First Name">First Name</label>
+                                    {{form.first_name}}
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="profile-input-field">
+                                    <label for="Last Name">Last Name</label>
+                                    {{form.last_name}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="profile-input-field">
+                                    <label for="Email">Email</label>
+                                    <input type="email" name="email" value="{{user.email}}" readonly>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="profile-input-field">
+                                    <label for="Username">Username</label>
+                                    <input type="text" name="username" value="{{user.username}}" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="profile-input-field">
+                                    <label for="city">City</label>
+                                    {{form.city}}
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="profile-input-field">
+                                    <label for="phone_number">Phone Number</label>
+                                    {{form.phone_number}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="profile-input-field">
+                                    <label for="bio">Bio</label>
+                                    {{form.bio}}
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="profile-input-field"></div>
+                        <input type="submit" class="profile-button" value="Save">
+                </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+</section>
+{% endblock %}

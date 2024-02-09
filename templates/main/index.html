@@ -1,0 +1,545 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/bg/bg-1.png' %}" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption text-center">
+                    <h1>SarvatoBhadra Gems</h1>
+                    <p>SARVATOBHADRA GEMS deals in Rough Gemstones, Faceted Stones, Cabochons, Beads Gemstone, Statues,
+                        Kundan-meena Jewellery, Silver metal jewellery, Big Gemstone Rocks and Specimens.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/bg/bg-2.png' %}" class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption text-center">
+                    <h2 class="mt-5">Get Exclusive</h2>
+                    <h1 class="para"><span>R</span>ange <span>O</span>f <span>G</span>emstones</h1>
+                </div>
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+
+
+<section id="category" class="p-2">
+    <div class="container py-1">
+        <div class="row">
+            <div class="col-12 text-center py-2">
+                <h2 class="display-4">Our Categories</h2>
+            </div>
+        </div>
+
+        <div class="row py-2">
+
+            <div class="col-md-6 col-12 col-lg-3 mb-4">
+                <div>
+                    <div class="text-center card-image">
+                        <img src="{% static 'images/img/diamond.png' %}" alt="" class="img-fluid inner-img">
+                    </div>
+                    <div class="text-center">
+                        <h4><a class="text-dark" href="{% url 'diamond_products' %}">Diamond Products</a></h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-12 col-lg-3 mb-4">
+                <div>
+                    <div class="text-center card-image">
+                        <img src="{% static 'images/img/beads.png' %}" alt="" class="img-fluid inner-img">
+                    </div>
+                    <div class="text-center">
+                        <h4><a class="text-dark" href="{% url 'beads_jewellery' %}">Beads Jewellery</a></h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-12 col-lg-3 mb-4">
+                <div>
+                    <div class="text-center card-image">
+                        <img src="{% static 'images/img/birth.png' %}" alt="" class="img-fluid inner-img">
+                    </div>
+                    <div class="text-center">
+                        <h4><a class="text-dark" href="{% url 'rashi_ratan' %}">Birth Stone</a></h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-12 col-lg-3 mb-4">
+                <div>
+                    <div class="text-center card-image">
+                        <img src="{% static 'images/img/cabochon.png' %}" alt="" class="img-fluid inner-img">
+                    </div>
+                    <div class="text-center">
+                        <h4><a class="text-dark" href="{% url 'cabochon' %}">Cabochon</a></h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-12 col-lg-3 mb-4 mb-lg-0">
+                <div>
+                    <div class="text-center card-image">
+                        <img src="{% static 'images/img/emerald.png' %}" alt="" class="img-fluid inner-img">
+                    </div>
+                    <div class="text-center">
+                        <h4><a class="text-dark" href="{% url 'emerald_gemstone' %}">Emerald Gemstone</a></h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-12 col-lg-3 mb-4 mb-lg-0">
+                <div>
+                    <div class="text-center card-image">
+                        <img src="{% static 'images/img/face.png' %}" alt="" class="img-fluid inner-img">
+                    </div>
+                    <div class="text-center">
+                        <h4><a class="text-dark" href="{% url 'faceted_stone' %}">Faceted Stones</a></h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-12 col-lg-3 mb-4 mb-lg-0">
+                <div>
+                    <div class="text-center card-image">
+                        <img src="{% static 'images/img/handicraft.png' %}" alt="" class="img-fluid inner-img">
+                    </div>
+                    <div class="text-center">
+                        <h4><a class="text-dark" href="{% url 'handicraft_products' %}">Handicrafts</a></h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-12 col-lg-3 mb-4 mb-lg-0">
+                <div>
+                    <div class="text-center card-image">
+                        <img src="{% static 'images/img/rough.png' %}" alt="" class="img-fluid inner-img">
+                    </div>
+                    <div class="text-center">
+                        <h4><a class="text-dark" href="{% url 'natural_rough_gemstone' %}">Rough Gemstone</a></h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="about" class="bg-light p-4">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="display-4">About Us</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-5 ">
+                <img class="img-fluid" src="{% static 'images/img/about-img.png' %}" alt="Company Image">
+            </div>
+            <div class="col-12 col-lg-7 mt-5">
+                <h2 class="display-6"><b>Sarvato Bhadra Gems Provide Natural Gemstones</b></h2>
+                <p class="mt-4">Precious Gemstones, Beads, Gemstone Statues, Specimens, Gemstone Rocks, Cheap Metal
+                    Jewelry,
+                    High-Grade
+                    Kundan Meena Jewelry, Several Gemstone Items, Shipping World-Wide
+                    Rough Gemstones Containers available in cheap prices.</p>
+                <p>
+                    We, SarvatoBhadra Gems, located in Bangalore, Karnataka are a recognised brand in the business
+                    having a
+                    rich experience in the gems and jewellery industry.
+                </p>
+                <div class="mt-4">
+                    <a href="{% url 'about' %}" class="about-btn">Read More</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="products" class="p-4">
+    <div class="container py-2">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="display-4">Our Products</h2>
+            </div>
+        </div>
+
+        <div class="row py-5">
+
+            <div class="col-md-6 col-12 col-lg-3 mb-2">
+                <div>
+                    <div class="text-center card-img">
+                        <img src="{% static 'images/product-img/product/p1.jpeg' %}" class="img-inner"
+                            alt="product-img">
+                    </div>
+                    <div class="text-center">
+                        <h4>Rudraksh Mala</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-12 col-lg-3 mb-2">
+                <div>
+                    <div class="text-center card-img">
+                        <img src="{% static 'images/product-img/product/p5.jpeg' %}" class="img-inner"
+                            alt="product-img">
+                    </div>
+                    <div class="text-center">
+                        <h4>Asta Lakshmi Yantra Chowki</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-12 col-lg-3 mb-2">
+                <div>
+                    <div class="text-center card-img">
+                        <img src="{% static 'images/product-img/product/p3.jpeg' %}" class="img-inner"
+                            alt="product-img">
+                    </div>
+                    <div class="text-center">
+                        <h4>Shree Yantra Chowki</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-12 col-lg-3 mb-2">
+                <div>
+                    <div class="text-center card-img">
+                        <img src="{% static 'images/product-img/product/p4.jpeg' %}" class="img-inner"
+                            alt="product-img">
+                    </div>
+                    <div class="text-center">
+                        <h4>Shree Yantra Chowki</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row mb-2 text-center">
+            <div class="col-12">
+                <div>
+                    <a href="{% url 'product' %}" class="about-btn">See All Products</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="p-2">
+    <div class="gallery wrapper">
+        <div class="container">
+
+            <div class="row mt-2">
+                <div class="col-12 text-content text-center">
+                    <h2 class="display-4">GEM STONES</h2>
+                </div>
+            </div>
+
+            <div class="grid-gallery">
+
+                <div class="grid-item">
+                    <a href="{% static 'gallery/img1.png' %}" data-lightbox="gridImage">
+                        <img src="{% static 'gallery/img1.png' %}" alt="image-gallery">
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="{% static 'gallery/img2.png' %}" data-lightbox="gridImage">
+                        <img src="{% static 'gallery/img2.png' %}" alt="image-gallery">
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="{% static 'gallery/img3.png' %}" data-lightbox="gridImage">
+                        <img src="{% static 'gallery/img3.png' %}" alt="image-gallery">
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="{% static 'gallery/img4.png' %}" data-lightbox="gridImage">
+                        <img src="{% static 'gallery/img4.png' %}" alt="image-gallery">
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="{% static 'gallery/img5.png' %}" data-lightbox="gridImage">
+                        <img src="{% static 'gallery/img5.png' %}" alt="image-gallery">
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="{% static 'gallery/img6.png' %}" data-lightbox="gridImage">
+                        <img src="{% static 'gallery/img6.png' %}" alt="image-gallery">
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section id="testimonial" class="p-2">
+    <div class="container text-center">
+        <h2 class="display-4">
+            What Our Customer Say
+        </h2>
+        <p class="p-2">Here are some kind words from our customers</p>
+        <div class="testimonials">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="single-item">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="profile">
+                                        <div class="img-area">
+
+                                            <img src="{% static 'images/img/image.jpg' %}" class="card-img-top"
+                                                alt="...">
+
+                                        </div>
+                                        <div class="bio">
+                                            <h2>Swapnil Rakhunde</h2>
+                                            <h4>Mathura</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <p><span><i class="fa fa-quote-left"></i></span>I had purchased a customised
+                                            ring with
+                                            SarvatoBhadra Gems
+                                            as
+                                            a present for my dad. The incessant questions I had regarding the process,
+                                            shipping, stone
+                                            quality
+                                            and ring type were answered with such patience. I had made many changes
+                                            along the way and the
+                                            customer service representatives were very accommodating with all my
+                                            requests.</p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    {% for r in reviews %}
+
+                    <div class="carousel-item">
+                        <div class="single-item">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="profile">
+                                        <div class="img-area">
+                                            {% if r.product_image %}
+                                            <img src="{{ r.product_image.url }}" class="card-img-top" alt="...">
+                                            {% else %}
+                                            <img src="{% static 'assets/images/img/diamond.png' %}" class="card-img-top"
+                                                alt="...">
+                                            {% endif %}
+
+                                        </div>
+                                        <div class="bio">
+                                            <h2>{{r.name}}</h2>
+                                            <h4>{{r.city}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <p><span><i class="fa fa-quote-left"></i></span>{{r.review}}</p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    {% endfor %}
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="row mt-2 mb-2">
+            <div class="col-12">
+                <div>
+                    <a href="{% url 'review' %}" class="about-btn">See All Reviews</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="banner">
+    <div class="banner mt-5">
+        <div class="container">
+            <div class="banner1">
+                <div class="banner-text">
+                    <h1 class="text-white">Get Recommendation !</h1>
+                    <h4 class="text-white">WHAT GEMSTONE SHOULD YOU WEAR?</h4>
+                    <div class="mt-4">
+
+                        <a href="{% url 'contact' %}" id="btn">GET IT NOW</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="container py-4">
+
+    <div class="row py-5">
+        <div class="col-12 text-center">
+            <h2 class="display-6 "><b>Frequently Asked Questions</b></h2>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-12">
+            <div class="accordion" id="accordion_2">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_4">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_4" aria-expanded="true" aria-controls="collapse_4">
+                            What are Gemstones?
+                        </button>
+                    </h2>
+                    <div id="collapse_4" class="accordion-collapse collapse show" aria-labelledby="heading_4"
+                        data-bs-parent="#accordion_2">
+                        <div class="accordion-body">
+                            Gemstones are basically rocks or minerals that are cut and polished to enhance their natural
+                            beauty.
+                            They are of various colors and shapes. Human kind has always been fascinated by gemstones
+                            and their
+                            beauty. Today, gemstones are used for astronomical as well as ornamental purposes. The
+                            beautiful cut,
+                            shine, and shapes attract a lot of people from all over the world.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_5" aria-expanded="false" aria-controls="collapse_5">
+                            What is the history of gemstones?
+                        </button>
+                    </h2>
+                    <div id="collapse_5" class="accordion-collapse collapse" aria-labelledby="heading_5"
+                        data-bs-parent="#accordion_2">
+                        <div class="accordion-body">
+                            Gemstones are basically mineral crystals which have dazzling brilliance and unique shape.
+                            They were
+                            found and unearthed many centuries ago and ever since that time, they have maintained their
+                            position in
+                            the hearts of human beings. It is believed that gemstones possess healing powers. In ancient
+                            times,
+                            Kings and Queens used to wear them as talismans and amulets that helped in protecting them
+                            from ghosts
+                            and evil. During those times, gemstones were used only by the rich and royal class.
+                            There are many types of gemstones available today. They are characterized as precious or
+                            semiprecious,
+                            organic or inorganic and natural or synthetic. Diamond, Ruby, Sapphire and Emerald are
+                            classified as
+                            Precious stones and all other gemstones are called semi precious stones. This classification
+                            was made
+                            during ancient times based on the rarity and quality of the gemstones.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_6" aria-expanded="false" aria-controls="collapse_6">
+                            Why should you wear gemstones?
+                        </button>
+                    </h2>
+                    <div id="collapse_6" class="accordion-collapse collapse" aria-labelledby="heading_6"
+                        data-bs-parent="#accordion_2">
+                        <div class="accordion-body">
+                            There are many reasons why you should wear gemstones. Traditionally, they are believed to
+                            remove all the
+                            negative energies attached to any zodiac sign. There are different gemstones for all zodiac
+                            signs, so
+                            you can benefit a lot by wearing a gemstone of your zodiac sign. Opal, yellow sapphire,
+                            emerald, ruby,
+                            red coral etc are the names of a few gemstones which are said to possess great powers. It is
+                            said that
+                            they transfer energies to people by body contact and cures many diseases. It is also said
+                            that they are
+                            bring good luck with them. So if you are having problems such as marriage conflicts,
+                            promotion issues or
+                            health issues, you can wear a gemstone, and who knows, your luck may take a U-turn and
+                            things may start
+                            falling into place!
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse_6" aria-expanded="false" aria-controls="collapse_6">
+                            Why is buying gemstones online feasible?
+                        </button>
+                    </h2>
+                    <div id="collapse_6" class="accordion-collapse collapse" aria-labelledby="heading_6"
+                        data-bs-parent="#accordion_2">
+                        <div class="accordion-body">
+                            When buying gemstones, it is said that you should buy from authentic stores so that you can
+                            get pure
+                            gemstones. In today's busy life, who has the time to go from shop to shop to check for good
+                            gemstones?
+                            To make it easier for you, gempundit.com sells best quality gemstones online at very
+                            affordable prices
+                            which you can buy from the comfort of your bedroom. You can even customize the gemstones as
+                            per your
+                            choice and get them made as ornaments. The website gives complete information so that you
+                            can get
+                            yourself assured and then buy them. We believe in selling only the best quality gemstones.
+                            Happy Shopping!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

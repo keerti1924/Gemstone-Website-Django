@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<!-- Review-page  -->
+
+<style>
+  .profile-button a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .profile-button a:hover {
+    color: #fff !important;
+  }
+</style>
+
+
+<!-- Review-section  -->
+
+<section class="py-5 review">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 mb-2 text-content text-center" style="margin-top: 100px;">
+        <h1 style="text-transform: capitalize; color: black;">SarvatoBhadra Gems Reviews</h1>
+      </div>
+    </div>
+
+    <div class="message m-2 p-2">
+      {% include 'components/message.html' %}
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+
+        <div class="card review-card" style="width: 20rem;">
+          <div class="row" style="justify-content: center; display: flex;">
+
+            <img src="{% static 'assets/img/ring.jpg' %}" class="card-img-top p-2" alt="..."
+              style="border-radius: 50%; height: 100px; width: 100px;">
+
+          </div>
+
+          <div class="card-body">
+
+            <p class="card-text" style="font-size: 15px; line-height: 1.2;"><span><i
+                  class="fa fa-quote-left"></i></span>I had purchased a customised
+                  ring with SarvatoBhadra Gems as a present for my dad. The incessant questions I had regarding the process,
+                  shipping, stone quality and ring type were answered with such patience. I had made many changes
+                  along the way and thecustomer service representatives were very accommodating with all my
+                  requests.</p>
+            <h5 class="text-dark fw-bold">~ Swapnil Rakhunde, Mathura</h5>
+
+          </div>
+        </div>
+
+      </div>
+      {% for r in reviews %}
+      <div class="col-lg-4 col-md-6 col-sm-12">
+
+        <div class="card review-card" style="width: 20rem;">
+          <div class="row" style="justify-content: center; display: flex;">
+
+
+            {% if r.product_image %}
+            <img src="{{ r.product_image.url }}" class="card-img-top p-2" alt="..."
+              style="border-radius: 50%; height: 100px; width: 100px;">
+            {% else %}
+            <img src="{% static 'assets/images/img/default.jpg' %}" class="card-img-top p-2" alt="..."
+              style="border-radius: 50%; height: 100px; width: 100px;">
+            {% endif %}
+
+          </div>
+
+          <div class="card-body">
+
+            <p class="card-text" style="font-size: 15px; line-height: 1.2;"><span><i
+                  class="fa fa-quote-left"></i></span> {{r.review}}</p>
+            <h5 class="text-dark fw-bold">~ {{r.name}}, {{r.city}}</h5>
+
+          </div>
+        </div>
+
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if user.is_authenticated %}
+
+    <div class="row mt-2">
+      <div class="col-12 text-center">
+        <div class="review-button p-2">
+          <a href="{% url 'create_review' %}" class="about-btn">Add Your Review</a>
+        </div>
+      </div>
+    </div>
+
+    {% endif %}
+  </div>
+
+</section>
+
+
+
+{% endblock %}

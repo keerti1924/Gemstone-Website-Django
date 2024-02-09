@@ -1,0 +1,75 @@
+{% load static %}
+
+ <!-- ======= Header ======= -->
+
+ <header id="header" class="fixed-top" style="background: #15222b;">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="{% url 'home' %}">
+        <img width="55px" src="{% static 'assets/img/icon.png' %}" alt="SarvatoBhadraGems"><span>SarvatoBhadraGems</span></a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="{% url 'home' %}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'about' %}">About</a></li>
+          <li class="dropdown"><a href="#"><span>Products</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+                <li><a href="{% url 'diamond_products' %}">Diamond Products</a></li>
+                <li><a href="{% url 'handicraft_products' %}">Handicraft
+                    Products</a></li>
+                <li><a href="{% url 'faceted_stone' %}">Faceted Products</a>
+                </li>
+                <li><a href="{% url 'natural_rough_gemstone' %}">Natural Rough
+                        Gemstone</a></li>
+                <li><a href="{% url 'emerald_gemstone' %}">Emerald Gemstone</a>
+                </li>
+                <li><a href="{% url 'rashi_ratan' %}">Rashi Ratan</a></li>
+                <li><a href="{% url 'jewellery' %}">Jewellery</a></li>
+                <li><a href="{% url 'cabochon' %}">Cabochon</a></li>
+                <li><a href="{% url 'beads_jewellery' %}">Beads Jewellery</a>
+                </li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
+            {% if user.is_authenticated and user.first_name == '' %}
+            <li class="dropdown">
+                <a class="nav-link" href="#">
+                    <img src="{{user.profile.profile_image.url}}" alt="" name="image" class="rounded-circle"
+                                height="30px" width="30px">
+                             <span style="margin-left: 10px;">Welcome, {{user.username}}</span>
+                    <i class="bi bi-chevron-down"></i>
+                    <ul>
+                        <li><a href="{% url 'profile' %}">Account</a></li>
+                        <li><a href="{% url 'logout' %}">Logout</a></li>
+                    </ul>
+                </a>
+            </li>
+
+            {% elif user.is_authenticated %}
+            <li class="dropdown">
+                <a class="nav-link" href="#">
+                    <img src="{{user.profile.profile_image.url}}" alt="" name="image" class="rounded-circle"
+                                height="30px" width="30px">
+                             <span style="margin-left: 10px;">Welcome, {{user.username}}</span>
+                    <i class="bi bi-chevron-down"></i>
+                </a>
+                    <ul>
+                        <li><a href="{% url 'profile' %}">Account</a></li>
+                        <li><a href="{% url 'logout' %}">Logout</a></li>
+                    </ul>
+            </li>
+
+            {% else %}
+            <li>
+                <a href="{% url 'register' %}" class="nav-link">
+                    <i class="bi bi-person-plus" style="font-size: 20px;"></i>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+</header>
+  <!-- End Header -->

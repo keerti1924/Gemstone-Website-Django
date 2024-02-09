@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- signin page  -->
+
+<div>
+    <div class="container main">
+        <div class="row signin">
+            <div class="col-md-6 signin-side-image">
+                <div class="text py-5 mt-2">
+                    <h2>Welcome Back!</h2>
+                    <p>To keep connected with us please login with your personal info..</p>
+                </div>
+            </div>
+            <div class="col-md-6 right">
+                <div class="input-box">
+                    <header style="color: black;">Sign In</header>
+                    {% include 'components/message.html' %}
+
+                    <form action="{% url 'login' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="input-field">
+                            <input type="text" class="input" id="email" name="email" required autocomplete="off">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" class="input" id="password" name="password" required
+                                autocomplete="off">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="signup-link mb-2">
+                            <span><a href="{% url 'password_reset' %}">Forgot Password</a></span>
+                        </div>
+                        <div class="input-field">
+                            <input type="submit" class="submit" value="Sign In">
+                        </div>
+                        <div class="signup-link">
+                            <span>Don't have an account? <a href="{% url 'register' %}">Signup Here</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

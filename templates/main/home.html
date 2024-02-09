@@ -1,0 +1,384 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+    <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
+      <h1>SarvatoBhadra Gems</h1>
+      <h2>SARVATOBHADRA GEMS deals in Rough Gemstones, Faceted Stones, Cabochons, Beads Gemstone, Statues,
+                        Kundan-meena Jewellery, Silver metal jewellery, Big Gemstone Rocks and Specimens.</h2>
+      <div class="d-flex">
+        <a href="{% url 'about' %}" class="btn-get-started scrollto">Read More</a>
+        
+      </div>
+    </div>
+</section>
+<!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-end ">
+          <div class="col-lg-12">
+            <div class="row justify-content-end">
+                <h2 class="display-4 text-center">Our Categories</h2>
+
+
+              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                    <img src="{% static 'assets/img/images/diamond.png' %}" alt="" class="img-fluid inner-img">
+                    <p><a href="{% url 'diamond_products' %}">Diamond Products</a></p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                    <img src="{% static 'assets/img/images/beads.png' %}" alt="" class="img-fluid inner-img">
+                    <p><a href="{% url 'beads_jewellery' %}">Beads Jewellery</a></p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                    <img src="{% static 'assets/img/images/birth.png' %}" alt="" class="img-fluid inner-img">
+                    <p><a href="{% url 'rashi_ratan' %}">Birth Stone</a></p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                    <img src="{% static 'assets/img/images/cabochon.png' %}" alt="" class="img-fluid inner-img">
+                    <p><a href="{% url 'cabochon' %}">Cabochon</a></p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                    <img src="{% static 'assets/img/images/emerald.png' %}" alt="" class="img-fluid inner-img">
+                    <p><a href="{% url 'emerald_gemstone' %}">Emerald Gemstone</a></p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                    <img src="{% static 'assets/img/images/face.png' %}" alt="" class="img-fluid inner-img">
+                    <p><a href="{% url 'faceted_stone' %}">Faceted Stones</a></p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                    <img src="{% static 'assets/img/images/handicraft.png' %}" alt="" class="img-fluid inner-img">
+                    <p><a href="{% url 'handicraft_products' %}">Handicrafts</a></p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                <div class="count-box">
+                    <img src="{% static 'assets/img/images/rough.png' %}" alt="" class="img-fluid inner-img">
+                    <p><a href="{% url 'natural_rough_gemstone' %}">Rough Gemstone</a></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row align-items-center">
+
+          <div class="col-lg-6 video-box align-self-baseline" data-aos="zoom-in" data-aos-delay="100">
+            <img src="{% static 'assets/img/images/about-img.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 pt-3 pt-lg-0 content">
+            <h3>Sarvato Bhadra Gems Provide Natural Gemstones</h3>
+            <p>
+                Precious Gemstones, Beads, Gemstone Statues, Specimens, Gemstone Rocks, Cheap Metal
+                Jewelry,
+                High-Grade
+                Kundan Meena Jewelry, Several Gemstone Items, Shipping World-Wide
+                Rough Gemstones Containers available in cheap prices.
+            </p>
+            <p>
+                We, SarvatoBhadra Gems, located in Bangalore, Karnataka are a recognised brand in the business
+                having a
+                rich experience in the gems and jewellery industry.
+            </p>
+            <div class="d-flex mt-5">
+                <a href="{% url 'about' %}" class="about-btn scrollto">Read More</a>
+                
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Product Section ======= -->
+    <section id="products" class="products">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+            <h2 class="display-4 mb-5 text-center">Our Products</h2>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+                <img src="{% static 'assets/img/product-img/product/p1.jpeg' %}" class="img-fluid"
+                alt="product-img" style="height: 300px;">
+              
+              <div class="card-body">
+                <h5 class="card-title">Rudraksh Mala</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+                <img src="{% static 'assets/img/product-img/product/p5.jpeg' %}" class="img-fluid"
+                alt="product-img" style="height: 300px;">
+              
+              <div class="card-body">
+                <h5 class="card-title">Asta Lakshmi Yantra Chowki</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+                <img src="{% static 'assets/img/product-img/product/p3.jpeg' %}" class="img-fluid"
+                alt="product-img" style="height: 300px;">
+              
+              <div class="card-body">
+                <h5 class="card-title">Shree Yantra Chowki</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+                <img src="{% static 'assets/img/product-img/product/p4.jpeg' %}" class="img-fluid"
+                alt="product-img" style="height: 300px;">
+              
+              <div class="card-body">
+                <h5 class="card-title">Shree Yantra Chowki</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+        <center>
+        <div class="mt-5">
+            <a href="{% url 'product' %}" class="about-btn text-center">See All Products</a>
+          </div>
+      </center>
+    </section><!-- End Product Section -->
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+            <h2 class="display-4 text-center mb-4">Gem Stones</h2>
+
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-emerald">Emerald</li>
+              <li data-filter=".filter-cabochon">Cabochon</li>
+              <li data-filter=".filter-diamond">Diamond</li>
+              <li data-filter=".filter-handicraft">Handicraft</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cabochon">
+            <img src="{% static 'assets/img/gallery/img1.png ' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Cabochon</h4>
+              <a href="{% static 'assets/img/gallery/img1.png ' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Cabochon"><i class="bx bx-plus"></i></a>
+              <a href="{% url 'cabochon' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cabochon">
+            <img src="{% static 'assets/img/gallery/img2.png ' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Cabochon</h4>
+              <a href="{% static 'assets/img/gallery/img2.png ' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Cabochon"><i class="bx bx-plus"></i></a>
+              <a href="{% url 'cabochon' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-handicraft">
+            <img src="{% static 'assets/img/product-img/handicraft/img4.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Handicraft</h4>
+              <a href="{% static 'assets/img/product-img/handicraft/img4.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Handicraft"><i class="bx bx-plus"></i></a>
+              <a href="{% url 'handicraft_products' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-emerald">
+            <img src="{% static 'assets/img/gallery/img3.png ' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Emerald Gemstone</h4>
+              <a href="{% static 'assets/img/gallery/img3.png ' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Emerald Gemstone"><i class="bx bx-plus"></i></a>
+              <a href="{% url 'emerald_gemstone' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-diamond">
+            <img src="{% static 'assets/img/product-img/Diamond_products/img4.jpg ' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Diamond Products</h4>
+              <a href="{% static 'assets/img/product-img/Diamond_products/img4.jpg ' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Diamond Products"><i class="bx bx-plus"></i></a>
+              <a href="{% url 'diamond_products' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-emerald">
+            <img src="{% static 'assets/img/gallery/img4.png ' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+                <h4>Emerald Gemstone</h4>
+              <a href="{% static 'assets/img/gallery/img4.png ' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Emerald Gemstone"><i class="bx bx-plus"></i></a>
+              <a href="{% url 'emerald_gemstone' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-handicraft">
+            <img src="{% static 'assets/img/product-img/handicraft/img2.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Handicraft</h4>
+              <a href="{% static 'assets/img/product-img/handicraft/img2.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Handicraft"><i class="bx bx-plus"></i></a>
+              <a href="{% url 'handicraft_products' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-emerald">
+            <img src="{% static 'assets/img/gallery/img5.png ' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+                <h4>Emerald Gemstone</h4>
+              <a href="{% static 'assets/img/gallery/img5.png ' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Emerald Gemstone"><i class="bx bx-plus"></i></a>
+              <a href="{% url 'emerald_gemstone' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-diamond">
+            <img src="{% static 'assets/img/gallery/img6.png ' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Diamond Products</h4>
+              <a href="{% static 'assets/img/gallery/img6.png ' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Diamond Products"><i class="bx bx-plus"></i></a>
+              <a href="{% url 'diamond_products' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-diamond">
+            <img src="{% static 'assets/img/product-img/Diamond_products/img1.jpg ' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Diamond Products</h4>
+              <a href="{% static 'assets/img/product-img/Diamond_products/img1.jpg ' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Diamond Products"><i class="bx bx-plus"></i></a>
+              <a href="{% url 'diamond_products' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+     <!-- ======= Banner Section ======= -->
+     <section id="banner" class="banner">
+        <div class="container" data-aos="zoom-in">
+  
+          <div class="row align-items-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="banner-slider swiper" >
+                <h1 class="text-white">Get Recommendation !</h1>
+              <p>WHAT GEMSTONE SHOULD YOU WEAR?</p>
+              <a href="{% url 'contact' %}" class="banner-btn">GET IT NOW</a>
+              </div>
+          </div>
+          
+        </div>
+      </section><!-- End Banner Section -->
+
+
+           <!-- ======= Testimonials Section ======= -->
+     <section id="testimonials" class="testimonials">
+        <div class="container" data-aos="zoom-in">
+            <h2 class="display-5 text-center mb-4">What Our Customer Say</h2>
+  
+          <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+  
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="{% static 'assets/img/ring.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Swapnil Rakhunde</h3>
+                  <h4>Mathura</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    I had purchased a customised
+                                            ring with
+                                            SarvatoBhadra Gems
+                                            as
+                                            a present for my dad. The incessant questions I had regarding the process,
+                                            shipping, stone
+                                            quality
+                                            and ring type were answered with such patience. I had made many changes
+                                            along the way and the
+                                            customer service representatives were very accommodating with all my
+                                            requests.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div><!-- End testimonial item -->
+
+              {% for r in reviews %}
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                    {% if r.product_image %}
+                  <img src="{{ r.product_image.url }}" class="testimonial-img" alt="">
+                  {% else %}
+                  <img src="{% static 'assets/images/img/diamond.png' %}" class="testimonial-img" alt="">
+                  {% endif %}
+
+                  <h3>{{r.name}}</h3>
+                  <h4>{{r.city}}</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    {{r.review}}
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+              {% endfor %}
+              <!-- End testimonial item -->
+  
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+  
+          <center>
+            <div class="mt-5">
+                <a href="{% url 'review' %}" class="about-btn text-center">See All Reviews</a>
+              </div>
+          </center>
+        </div>
+      </section><!-- End Testimonials Section -->
+
+
+
+  </main><!-- End #main -->
+
+{% endblock %}

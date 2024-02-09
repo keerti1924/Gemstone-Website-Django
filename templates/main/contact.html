@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- section-1 contact-page  -->
+
+<section id="contact">
+    <div class="contact-us">
+
+        <div class="container mt-5">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="header text-center">
+                        <h1 class="text-white mt-2">Contact Us</h1>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-md-12 col-lg-6 text-center mt-5">
+                    <div class="contact-image">
+                        <p>
+                            <i class="bi bi-whatsapp"></i>
+                        </p>
+                        <h4 class="text-white">Let's connect on whatsapp</a></h4>
+                        <a href="https://wa.me/+918840544273" class="text-white btn btn-success p-2">Connect</a>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6">
+
+                    
+                    <form method="POST" class="p-4 m-auto mt-2">
+                        {% csrf_token %}
+                        {% include 'components/message.html' %}
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" name="name" placeholder="Your name..">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <input type="number" class="form-control" name="phone" placeholder="Your phone number..">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <textarea rows="5" class="form-control" placeholder="Your Query Here...."
+                                        name="query" required></textarea>
+                                </div>
+                            </div>
+
+                            <center>
+                                <button type="submit" class="button">Send Now</button>
+                            </center>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+{% endblock %}

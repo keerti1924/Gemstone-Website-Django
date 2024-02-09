@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- signup page  -->
+
+<div>
+    <div class="container main">
+        <div class="row signup">
+            <div class="col-md-6 signup-side-image">
+                <div class="text py-5 mt-2">
+                    <h2 class="text-white">Hello, Friend!</h2>
+                    <p>Enter your details and start journey with us.</p>
+                </div>
+            </div>
+            <div class="col-md-6 right">
+
+                <div class="input-box">
+                    <header style="color: black;">Create Account</header>
+                    {% include 'components/message.html' %}
+
+                    <form action="{% url 'register' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="input-field">
+                            <input type="text" class="input" id="username" name="username" required autocomplete="off">
+                            <label for="username">Username</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="email" class="input" id="email" name="email" required autocomplete="off">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" class="input" id="password" name="password" required
+                                autocomplete="off">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="submit" class="submit" value="Sign Up">
+                        </div>
+                        <div class="signin-link">
+                            <span>Already have an account? <a href="{% url 'login' %}">Login Here</a></span>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
